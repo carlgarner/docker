@@ -6,6 +6,8 @@ RUN apt-get install sudo openssh-client python-pip python-yaml -y
 
 RUN pip install pyrx
 
+RUN pip install ansible-lint
+
 RUN sed -i 's/httpredir.debian.org/aptrepo.piksel.com/g' /etc/apt/sources.list
 
 RUN gem install librarian-puppet
