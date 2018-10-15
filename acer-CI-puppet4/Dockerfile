@@ -1,5 +1,7 @@
 FROM mojibakeumd/docker-rspec-puppet@sha256:3b949ce4cbc17ed86307a1dba229b07ca510f08f71449dc6bb3650c137acb8b3
 
+RUN apt-get update
+
 RUN apt-get install software-properties-common
 RUN add-apt-repository 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main'
 
