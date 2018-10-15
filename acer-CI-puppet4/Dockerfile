@@ -1,14 +1,15 @@
 FROM mojibakeumd/docker-rspec-puppet@sha256:3b949ce4cbc17ed86307a1dba229b07ca510f08f71449dc6bb3650c137acb8b3
 
+RUN apt-get install software-properties-common
+RUN add-apt-repository 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main'
+
 RUN apt-get update
 
-RUN apt-get install sudo openssh-client python-pip python-yaml -y
+RUN apt-get install sudo openssh-client python-pip python-yaml ansible=2.7.0-1ppa~trusty -y
 
 RUN pip install pyrx
 
-RUN wget http://ftp.debian.org/debian/pool/main/a/ansible-lint/ansible-lint_3.4.20+git.20180203-1_all.deb
-RUN dpkg -i ansible-lint_3.4.20+git.20180203-1_all.deb
-#RUN pip install ansible-lint
+RUN pip install ansible-lint
 
 RUN sed -i 's/httpredir.debian.org/aptrepo.piksel.com/g' /etc/apt/sources.list
 
