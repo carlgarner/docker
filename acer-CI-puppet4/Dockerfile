@@ -6,7 +6,9 @@ RUN apt-get install sudo openssh-client python-pip python-yaml -y
 
 RUN pip install pyrx
 
-RUN PYTHONIOENCODING=utf-8 pip install ansible-lint
+RUN wget http://ftp.debian.org/debian/pool/main/a/ansible-lint/ansible-lint_3.4.20+git.20180203-1_all.deb
+RUN dpkg -i ansible-lint_3.4.20+git.20180203-1_all.deb
+#RUN pip install ansible-lint
 
 RUN sed -i 's/httpredir.debian.org/aptrepo.piksel.com/g' /etc/apt/sources.list
 
