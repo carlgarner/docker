@@ -9,11 +9,11 @@ RUN apt-get update
 
 RUN apt-get install sudo openssh-client python-dev python-pip python-yaml ansible=2.7.2-1ppa~trusty -y
 
+RUN pip install -U pip
+
 RUN pip install pyrx
 RUN pip install awscli
 
-RUN pip install PySocks
-RUN pip install urllib3[socks]
 RUN pip install ansible-lint
 
 RUN sed -i 's/httpredir.debian.org/aptrepo.piksel.com/g' /etc/apt/sources.list
