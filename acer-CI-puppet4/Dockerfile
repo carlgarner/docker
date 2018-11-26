@@ -7,7 +7,7 @@ RUN add-apt-repository 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trus
 
 RUN apt-get update
 
-RUN apt-get install sudo openssh-client python-dev python-pip python-yaml ansible=2.7.0-1ppa~trusty -y
+RUN apt-get install sudo openssh-client python-dev python-pip python-yaml ansible=2.7.2-1ppa~trusty -y
 
 RUN pip install pyrx
 RUN pip install awscli
