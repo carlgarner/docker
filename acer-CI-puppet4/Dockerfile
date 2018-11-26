@@ -7,10 +7,10 @@ RUN add-apt-repository 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trus
 
 RUN apt-get update
 
-RUN apt-get install sudo openssh-client python-pip python-yaml ansible=2.7.0-1ppa~trusty -y
+RUN apt-get install sudo openssh-client python-dev python-pip python-yaml ansible=2.7.0-1ppa~trusty -y
 
 RUN pip install pyrx
-
+RUN pip install awscli
 RUN pip install ansible-lint
 
 RUN sed -i 's/httpredir.debian.org/aptrepo.piksel.com/g' /etc/apt/sources.list
