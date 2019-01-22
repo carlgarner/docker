@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN cat /etc/apt/sources.list
 RUN apt-get update
-
+RUN apt-get install sudo openssh-client
 RUN apt-get install ca-certificates apt-transport-https gnupg gcc g++ make wget curl libpng-dev -y
 RUN curl -sL https://deb.nodesource.com/setup_9.x | bash - \
     && wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add - \
