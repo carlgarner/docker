@@ -3,6 +3,7 @@ FROM debian:stretch-slim
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN cat /etc/apt/sources.list
+
 RUN apt-get update
 RUN apt-get install sudo openssh-client
 RUN apt-get install ca-certificates apt-transport-https gnupg gcc g++ make wget curl libpng-dev -y
