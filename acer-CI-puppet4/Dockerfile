@@ -4,6 +4,12 @@ RUN apt-get update
 
 RUN apt-get install sudo openssh-client python-pip python-yaml -y
 
+RUN wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+RUN tar xzf Python-3.7.3.tgz
+RUN cd Python-3.7.3
+RUN ./configure --enable-optimizations
+RUN make altinstall
+
 RUN pip install pyrx
 
 RUN sed -i 's/httpredir.debian.org/aptrepo.piksel.com/g' /etc/apt/sources.list
