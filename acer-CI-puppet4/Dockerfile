@@ -4,7 +4,7 @@ RUN apt-get update \
 	&& apt-get install software-properties-common -y \
 	&& add-apt-repository 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' \
 	&& apt-get update \
-	&& apt-get install sudo openssh-client python-dev python-pip python-yaml ansible=2.7.2-1ppa~trusty -y \
+	&& apt-get install sudo openssh-client python-dev python-pip python-yaml ansible=2.8.2-1ppa~trusty -y \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& sed -i 's/httpredir.debian.org/aptrepo.piksel.com/g' /etc/apt/sources.list \
 	&& rm -rf Python-3.7.3* /var/lib/apt/lists/* /tmp/* /var/tmp/* \
