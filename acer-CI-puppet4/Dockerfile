@@ -11,7 +11,7 @@ RUN apt-get update \
 	&& apt-get clean \
     && pip install -U pip \
 	&& pip install pyrx awscli ansible-lint \
-    && gem install librarian-puppet puppet:4.10.12 puppetlabs_spec_helper:0.10.3 puppet-lint:2.3.6 facter:2.5.1 rspec_junit_formatter:0.2.3 parallel_tests:2.7.0
+    && gem install librarian-puppet puppet:4.10.12 puppetlabs_spec_helper:0.10.3 puppet-lint:2.3.6 facter:2.5.1 rspec_junit_formatter:0.2.3 parallel:1.12.1 parallel_tests:2.7.0
 
 
 #RUN gem install puppet -v '< 5.0.0'
